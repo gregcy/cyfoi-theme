@@ -1,183 +1,279 @@
-<% @title = "Your privacy" %>
+<% @title = "Politique de confidentialité - Données personnelles et cookies" %>
 
 <%= render :partial => 'sidebar' %>
 
 <div id="left_column_flip" class="left_column_flip">
-  <h1 id="privacy"><%= @title %> <a href="#privacy">#</a></h1>
+<h1 id="confidentialite"><%= @title %> <a href="#confidentialite">#</a></h1>
+<dl>
+  <dd>
+    <p>MaDada est géré par OpenKnowledge France, une association loi 1901. Pour obtenir plus d'informations sur l'association, visitez <a href="https://fr.okfn.org/"> notre site web</a>.</p>
+
+    <p>De par notre engagement pour la transparence, nous attachons la plus grande importance à la protection de la vie privée, et la sécurité de nos utilisateurs. La longueur de ce document en est une conséquence. Nous sommes conscients que ces documents sont rarement attractifs, et nous avons fait de notre mieux pour le rendre clair et compréhensible.</p>
+
+    <p>Nous espérons qu'il couvre l'ensemble des questions que vous pouvez vous poser. Si ce n'est pas le cas, n'hésitez pas à nous contacter.</p>
+  </dd>
+  <dt id="adresse_email">Qui peut voir mon adresse email ? <a href="#adresse_email">#</a> </dt>
+
+  <dd>
+    <p>
+    Nous ne divulguerons pas votre adresse email publiquement (sauf si nous y sommes obligés 
+    légalement, ou si vous nous le demandez). Cela inclut l'autorité publique à laquelle vous envoyez 
+    une demande qui ne verra qu’un email “@<%= AlaveteliConfiguration::incoming_email_domain %>” 
+    qui aura été créé spécifiquement pour votre demande. 
+    </p>
+    <p>
+    Si vous envoyez un message privé via le site à un autre utilisateur, ce dernier verra votre adresse email. Un avertissement vous le rappellera au moment de l'envoi.
+    </p>
+  </dd>
+
+  <dt id="spam">Allez-vous envoyer du spam sur mon adresse email ? <a href="#spam">#</a> </dt>
+  <dd>
+    <p>Non. Une fois que vous vous inscrivez sur <%= site_name %>, nous ne vous enverrons que des emails qui concernent une demande que vous avez faite, une alerte email à laquelle vous vous êtes inscrit, l’activité de la plateforme ou à d'autres occasions pour lesquelles vous avez donné votre autorisation. Nous ne donnerons ou ne vendrons jamais votre adresse email à des tiers, à moins que nous soyons obligés légalement de le faire, ou si vous nous l'avez demandé.</p>
+  </dd>
+
+  <dt id="demande_publique">Pourquoi mon nom et ma demande apparaissent publiquement sur le site ? <a href="#demande_publique">#</a> </dt>
+
+  <dd>
+    <p>Nous publions votre demande sur Internet, afin que tout le monde puisse la lire et 
+    puisse utiliser les informations que vous avez reçues des autorités publiques. 
+    Normalement, nous ne supprimons pas les demandes (plus de détails voir 
+    (<a href="#supprimer_une_demande">Pouvez-vous supprimer mes informations personnelles ?</a>).
+    </p>
+    <p>Votre nom est lié à votre demande, c'est pourquoi il est publié. L'utilisation de votre vrai 
+    nom aide également les personnes à entrer en contact avec vous afin de vous aider dans votre 
+    recherche. Légalement vous devez utiliser votre nom réel pour que la demande soit valide. 
+    Lisez la prochaine question pour avoir des solutions si vous ne voulez pas publier votre nom complet.
+    </p>
+  </dd>
+
+  <dt id="pseudonyme">Puis-je faire une demande d'informations sous un pseudonyme ?<a href="#pseudonyme">#</a> </dt>
+  <dd>
+    <p>Vous devez utiliser votre vrai nom pour que votre demande soit valide. Cependant, les 
+    administrations devraient accepter de répondre à une demande faite sous un pseudonyme. 
+    Attention cependant, même si l'autorité suit cette bonne pratique, l'usage d'un pseudonyme 
+    vous empêchera de saisir la Commission d’Accès aux Documents Administratif (CADA) en cas de 
+    refus de l’autorité.
+    </p>
+
+    <p>Il y a plusieurs alternatives à l'utilisation d'un pseudonyme.</p>
+
+    <ul>
+      <li>
+        Utiliser une autre forme de votre nom. «M. Arthur Thomas Roberts" peut s'appeler 
+        "Arthur Roberts", "A. T. Roberts", ou "M. Roberts", mais pas "Arthur" ou "A.T.R.".
+      </li>
+      <li>
+        Les femmes peuvent utiliser leur nom de jeune fille.
+      </li>
+      <li>
+        Utiliser, avec leur accord, le nom d'une organisation, le nom d'une société, 
+        le nom commercial d'une entreprise, le nom d'une ASBL, ...
+      </li>
+      <li>
+        Demander à quelqu'un de faire la demande à votre place.
+      </li>
+    </ul>
+    <p>Vous pouvez, si vous êtes vraiment bloqués, nous demander de faire la demande à votre place. 
+    Dans ce cas veuillez nous contacter en nous expliquant les raisons pour lesquelles vous ne 
+    pouvez pas faire la demande vous-même et pourquoi vous ne pouvez pas demander à une connaissance 
+    de le faire. Nous ne disposons pas des ressources nécessaires pour le faire pour tout le monde. 
+    Dans tous les cas ne vous faites jamais passer pour quelqu'un d'autre !
+    </p>
+
+  </dd>
+
+  <dt id="adresse_postale">L’autorité publique demande mon adresse postale <a href="#adresse_postale">#</a> </dt>
+
+  <dd>
+    <p>La législation sur la publicité de l’administration exige que les demandes soient introduites 
+    par écrit. La jurisprudence reconnaît l’email comme un écrit valide pour demander l’accès aux 
+    informations détenues par les autorités publiques. Insistez donc pour recevoir une réponse par email.
+    </p>
+  </dd>
+
+  <dt id="reponse_postale">L’autorité a besoin d'une adresse postale pour m'envoyer une réponse par la Poste ! <a href="#reponse_postale">#</a> </dt>
+
+  <dd>
+    <p>Si une autorité ne dispose que d'une copie papier de l'information que vous voulez, 
+    ils peuvent vous demander une adresse postale. Pour commencer, essayez de les convaincre 
+    de numériser les documents pour vous. Si cela ne fonctionne pas, et que vous voulez fournir 
+    votre adresse postale en privé afin de recevoir les documents, marquez votre demande en utilisant 
+    l’option "Ils vont répondre par la poste". Vous aurez alors une adresse électronique pour 
+    les contacter en aparté.
+    </p>
+  </dd>
+
+  <dt id="supprimer_une_demande">Pouvez-vous supprimer mes demandes, ou modifier mon nom ?  <a href="#supprimer_une_demande">#</a> </dt>
+
+  <dd>
+
+    <p><%= site_name %> est une archive publique permanente des demandes d'accès à l'information. 
+    Même si vous trouvez qu'une réponse à une demande n'est plus utile, elle peut être intéressante 
+    pour les autres. Pour cette raison, nous ne supprimons pas les demandes.
+    </p>
+
+    <p>Dans des circonstances exceptionnelles, nous pouvons supprimer ou modifier votre nom sur le site, 
+    (<a href="#suppression">voir la question suivante</a>). De même, nous pouvons également supprimer d'autres informations 
+    personnelles. Si vous êtes inquiet à ce sujet, consultez la section sur les pseudonymes 
+    avant de faire votre demande.
+    </p>
+
+  </dd>
+
+  <dt id="suppression">Pouvez-vous supprimer mes informations personnelles ? <a href="#suppression">#</a> </dt>
+
+  <dd>
+
+    <p>Si vous voyez des informations personnelles vous concernant sur le site et que vous souhaitez 
+    que nous les supprimions ou les cachions, veuillez <a href="<%= help_contact_path %>">nous en informer</a>. Indiquez exactement quelles 
+    informations vous pose problème, pourquoi, et à quel endroit elle apparaît sur le site.
+    </p>
+
+    <p>Si ce sont des informations personnelles sensibles qui ont été accidentellement postées, 
+    nous les supprimerons. Normalement, nous ne considérons que les demandes de suppression 
+    des informations personnelles qui proviennent de la personne concernée, mais pour des 
+    informations sensibles sur d'autres personnes, nous serions reconnaissant à quiconque 
+    de nous les faire remarquer.
+    </p>
+
+    <p>Nous considérons qu'il y a un intérêt public à garder les noms des fonctionnaires ou des 
+    agents des pouvoirs publics. Nous ne supprimerons ces noms que dans des circonstances 
+    exceptionnelles, par exemple lorsque la divulgation d'un nom et la position d’une personne 
+    pourrait porter préjudice à la sécurité d'un individu. Si vous êtes un de ces fonctionnaires 
+    et que vous souhaitez faire retirer votre nom pour une telle raison, vous devez nous envoyer 
+    une demande de suppression via votre supérieur hiérarchique. Cette demande doit démontrer 
+    que le risque est flagrant et que ce risque l'emporte sur l'intérêt public. Vous devrez 
+    également démontrer que des efforts ont été faits pour dissimuler le nom de la personne 
+    concernée sur le site de l'autorité publique. Nous ne pouvons pas facilement modifier 
+    certaines formes de pièces jointes (comme les fichiers PDF ou des fichiers Microsoft Word ou Excel), 
+    nous allons donc généralement demander aux autorités de nous renvoyer les documents en supprimant 
+    au préalable les informations personnelles.
+    </p>
+
+    <p>Pour en savoir plus, consultez la <a href="<%= help_officers_path %>">FAQ pour les administrations</a></p>
+  </dd>
+
+</dl>
+<h2>Cookies et services externes</h2>
   <dl>
-
-    <dt id="email_address">Who gets to see my email address? <a href="#email_address">#</a> </dt>
-
-    <dd><p>We will not disclose your email address to anyone unless we are obliged to by law,
-        or you ask us to. This includes the public authority that you are sending a
-        request to.  They only get to see an email address
-        @<%= AlaveteliConfiguration::incoming_email_domain %> which is specific to that request.  </p>
-      <p>If you send a message to another user on the site, then it will reveal your
-        email address to them. You will be told that this is going to happen.</p>
-    </dd>
-
-    <dt id="nasty_spam">Will you send nasty, brutish spam to my email address? <a href="#nasty_spam">#</a> </dt>
-    <dd>Nope. After you sign up to <%= site_name %> we will only send you emails
-      relating to a request you made, an email alert that you have signed up for,
-      or for other reasons that you specifically authorise. We will never give or
-      sell your email addresses to anyone else, unless we are obliged to by law, or
-      you ask us to.
-    </dd>
-
-    <dt id="public_request">Why will my name and my request appear publicly on the site? <a href="#public_request">#</a> </dt>
+    <dt id="cookies">Cookies<a href="#cookies">#</a> </dt>
 
     <dd>
-      <p>We publish your request on the Internet so that anybody can read it and
-        make use of the information that you have found. We do not normally delete
-        requests (<a href="#delete_requests">more details</a>).
-      </p>
-      <p>
-        Your name is tangled up with your request, so has to be published as well.
-        It is only fair, as we're going to publish the name of the civil servant who
-        writes the response to your request.  Using your real name also helps people
-        get in touch with you to assist you with your research or to campaign with you.
-      </p>
-      <p>By law, you must use your real name for the request to be a valid Freedom of
-        Information request. See the next question for alternatives if you do not want
-        to publish your full name.
-      </p>
+      <p>Afin de rendre notre service plus facile d'utilisation et plus utile, nous utilisons de petits fichiers enregistrés sur votre navigateur web (sur votre ordinateur ou smartphone), appelés "cookies". C'est une pratique très courante, et la plupart des sites web utilisent ce système.</p>
+
+      <p>Ces cookies nous permettent par exemple de savoir que vous êtes connecté.e, et ainsi de ne pas vous redemander un mot de passe à chaque page. La liste ci-dessous décrit les cookies que nous utilisons:</p>
+      <table>
+      <tbody><tr>
+        <th scope="col">Non</th>
+        <th scope="col">Contenu typique</th>
+        <th scope="col">Expiration</th>
+      </tr>
+      <tr>
+        <td>_wdtk_cookie_session</td>
+        <td>Un identifiant unique aléatoire</td>
+        <td>Lorsque le navigateur est fermé, ou après un mois, si vous avez coché "Souvenez-vous de moi" lorsque vous vous êtes connecté.e</td>
+      </tr>
+      <tr>
+        <td>seen_foi2</td>
+        <td>Le chiffre 1 si vous avez vu une notification</td>
+        <td>7 jours</td>
+      </tr>
+      <tr>
+        <td>has_seen_country_message</td>
+        <td>Le chiffre 1 si vous avez vu le message concernant les services FOI dans d'autres pays</td>
+        <td>1 an</td>
+      </tr>
+      <tr>
+        <td>last_request_id</td>
+        <td>Un numéro identifiant la dernière demande que vous avez vue sur notre site</td>
+        <td>A la fermeture du navigateur</td>
+      </tr>
+      <tr>
+        <td>last_body_id</td>
+        <td>Un numéro identifiant la dernière administratio que vous avez vue sur notre site</td>
+        <td>A la fermeture du navigateur</td>
+      </tr>
+      <tr>
+        <td>widget_vote</td>
+        <td>Un identifiant aléatoire relatif à un vote "Je veux aussi savoir" sur une demande qui vous intéresse</td>
+        <td>A la fermeture du navigateur</td>
+      </tr>
+      </tbody></table>
     </dd>
 
-    <dt id="real_name">Can I make an FOI request using a pseudonym? <a href="#real_name">#</a> </dt>
-
+    <dt id="statistiques">Statistiques d'utilisation<a href="#statistiques">#</a> </dt>
 
     <dd>
-      <p>Technically, you must use your real name for your request to be a valid Freedom of Information request in UK law. See this
-        <a href="http://www.ico.gov.uk/upload/documents/library/freedom_of_information/detailed_specialist_guides/name_of_applicant_fop083_v1.pdf">guidance from the Information Commissioner</a> (January 2009).
-      </p>
-
-      <p>However, the same guidance also says it is good practice for the public
-        authority to still consider a request made using an obvious pseudonym.
-        You should refer to this if a public authority refuses a request because you
-        used a pseudonym.</p>
-
-      <p>Be careful though, even if the authority follows this good practice, the
-        pseudonym will probably make it impossible for you to complain to the
-        Information Commissioner later about the handling of your request.
-      </p>
-
-      <p>There are several good alternatives to using a pseudonym.</p>
-
+      <p> Nous utilisons <a href="https://matomo.org/">matomo</a> pour collecter des statistiques sur l'utilisation du site, dans le but d'améliorer le service. Nous avons désactivé l'usage des cookies sur matomo.
+      Les statistiques sur nous conservons incluent :
       <ul>
-        <li>Use a different form of your name. The guidance says
-          that "Mr Arthur Thomas Roberts" can make a valid request as "Arthur Roberts",
-          "A. T. Roberts", or "Mr Roberts", but <strong>not</strong> as "Arthur" or "A.T.R.".
-        </li>
-        <li>Women may use their maiden name.</li>
-        <li>In most cases, you may use any name by which you are "widely known and/or
-          is regularly used".</li>
-        <li>Use the name of an organisation, the name of a company, the trading name of
-            a company, or the trading name of a sole trader.</li>
-        <li>Ask someone else to make the request on your behalf.</li>
-        <li>You may, if you are really stuck, ask us to make the request on
-          your behalf. Please <a href="<%= help_contact_path %>">contact us</a> with
-          a good reason why you cannot make the request yourself and cannot
-          ask a friend to. We don't have the resources to do this for everyone.</li>
+        <li>L'adresse IP (nous n'en conservons qu'une partie, qui ne permet pas d'identifier un utilisateur de manière unique)</li>
+        <li>Les pages visitées</li>
+        <li>L'origine de la visite</li>
+        <li>Des informations sur votre navigateur web (logiciel, version …)</li>
+        <li>Ces données ne sont pas partagées, ni agrégées avec celles d'autres sites. L'historique des visites est détruit après 6 mois.</li>
       </ul>
-
-      <p>Please do not try to impersonate someone else.</p>
-
-    </dd>
-
-    <dt id="full_address">They've asked for my postal address! <a href="#full_address">#</a> </dt>
-
-    <dd>
-      <p>If a public authority asks you for your full, physical address, reply to them saying
-        that section 8.1.b of the FOI Act asks for an "address for correspondence",
-        and that the email address you are using is sufficient.
-      </p>
-      <p>
-        The Ministry of Justice has <a href="http://www.justice.gov.uk/guidance/foi-procedural-what.htm">guidance
-          on this</a> &ndash;
-        <em>"As well as hard copy written correspondence, requests that are
-          transmitted electronically (for example, in emails) are acceptable
-          ... If a request is received by email and no postal address is given, the email
-          address should be treated as the return address."
-        </em>
-      </p>
-      <p>As if that isn't enough, the Information Commissioner's
-        <a href="http://www.ico.gov.uk/upload/documents/library/freedom_of_information/practical_application/foi_hints_for_practitioners_handing_foi_and_eir_requests_2008_final.pdf">Hints for Practitioners</a> say
-        <em>"Any correspondence could include a request for information. If it is written (this includes e-mail), legible, gives the name of the applicant, an address for reply (which could be electronic), and includes a description of the information required, then it will fall within the scope of the legislation."</em>
+      Vous pouvez consulter la politique de confidentialité de matomo sur <a href="https://matomo.org/privacy-policy/">leur site (en anglais)</a>.
       </p>
     </dd>
 
-    <dt id="postal_answer">No no, they need a postal address to send a paper response! <a href="#postal_answer">#</a> </dt>
+</dl>
+<h1 id="charte">Charte d'usage<a href="#charte">#</a></h1>
+<dl>
+  <dd>
+    <dt id="preambule">Préambule<a href="#preambule">#</a> </dt>
 
-    <dd>
-      <p>If an authority only has a paper copy of the information that you want,
-        they may ask you for a postal address. To start with, try persuading them
-        to scan in the documents for you. You can even <a href="https://www.whatdotheyknow.com/request/car_parking_charges_policy_and_a#outgoing-532">offer to gift them a scanner</a>, which in that particular case
-        embarrassed the authority into finding one they had already.</p>
+    <p>En créant un compte sur madada.fr, vous vous engagez à adhérer à cette charte.</p>
 
-      <p>If that doesn't work, and you want to provide your postal address privately
-        in order to receive the documents, mark your request as "They are going to reply by post", and it will
-        give you an email address to use for that purpose.</p>
-    </dd>
+    <p>MaDada est une plateforme opérée par l'association Open Knowledge France visant à faciliter la demande de documents administratifs.</p>
 
-    <dt id="delete_requests">Can you delete my requests, or alter my name?  <a href="#delete_requests">#</a> </dt>
+    <p>Les demandes de documents administratifs n'ont pas nécessité à être effectuées par une personne nommément identifiée. Toutefois, en cas de recours auprès de la CADA ou de saisine du tribunal administratif, il pourra être exigé de votre part de fournir un justificatif d'identité. Pendant la phase initiale, la plateforme transmet votre demande par le biais d'une adresse email dédiée. Ce mécanisme permet de rendre les échanges publics et de dissimuler votre adresse email. Cependant, à moins que vous ayez un motif légitime, nous vous encourageons à signer votre courrier avec votre vraie identité car vous êtes légitime à exercer votre droit d'accès à l'information publique. Si vous utilisez un pseudonyme ou que vous usurpez une identité publique, l'équipe de modération se réserve le droit de masquer votre demande afin d'éviter les risques de procédures en diffamation. De la même manière si votre demande concerne des informations à caractère privée, elle sera supprimée de la plateforme par l'équipe de modération.</p>
+  </dd>
+  <dd>
+  <dt id="madada++">Conditions d’accès au service MaDada++<a href="#madada++">#</a> </dt>
 
-    <dd>
+    <p>MaDada dispose d'une version augmentée nommée <a href"https://madada.fr/pro>MaDada++</a>. Elle est a priori accessible à toutes et tous sur simple demande à l'aide de ce <a href"https://madada.fr/pro#input-account-request">formulaire</a>.</p>
 
-      <p><%= site_name %> is a permanent, public archive of Freedom of
-        Information requests. Even though you may not find the response to
-        a request useful any more, it may be of interest to others. For this
-        reason, we will not delete requests.
-      </p>
+    <p>Nous vous demandons uniquement de créer au préalable un compte et d'effectuer une première demande avant de demander l'activation des fonctionnalités avancées.</p>
 
-      <p>Under exceptional circumstances we may remove or change your name
-        on the website, <a href="#takedown">see the next question</a>.
-        Similarly, we may also remove other personal information.
-      </p>
+    <p>Afin d'éviter que la plateforme ne serve à spammer des autorités publiques, nous vous demandons simplement de justifier votre besoin d'utilisation de ces fonctionnalités avancées. Vous êtes journaliste d’investigation ou vous souhaitez effectuer des recherches sur le bilan carbone d'autorités publiques. Ces fonctionnalités sont pour vous!</p>
 
-      <p>If you're worried about this before you make your request,
-        see the section on <a href="#real_name">pseudonyms</a>.</p>
+    <p>En effet, une fois votre compte MaDada++ activé vous pourrez envoyer la même demande à de nombreuses autorités administratives simultanément. Afin de conserver la crédibilité de notre serveur de mail nous sommes donc vigilants à ce que celle-ci ne soit pas utilisée pour d'autre objet que les demandes d'accès à l'information.</p>
 
-    </dd>
+    <p>En complément, vous pouvez choisir de masquer la visibilité de votre demande d'accès à des documents administratifs en plaçant celle-ci sous embargo pour la durée de votre choix (3, 6 mois). Cette fonctionnalité est destinée aux journalistes, activistes ou chercheuses ou chercheurs pendant la durée de leur travail d'investigation. Toutefois, à l'issue de cette période, vous vous engagez à rendre public vos demandes car notre but est de contribuer à l'accès ouvert à l'information.</p>
+  </dd>
+  <dd>
+    <dt id="preambule">Les utilisateurs<a href="#utilisateurs">#</a> </dt>
+    
+      <p>En utilisant le service en ligne MaDada vous vous engagez à ne pas l'utiliser pour envoyer des courriels non-désirés aux autorités publiques. Vous vous engagez également à ne pas diffamer ou insulter les autorités administratives ou les représentantes et représentants.</p>
 
-    <dt id="takedown">Can you take down personal information about me? <a href="#takedown">#</a> </dt>
+      <p>Vous vous engagez également à utiliser un ton courtois lors de vos échanges avec les autorités publiques saisies.</p>
+      <p>En utilisant ce service vous vous engagez à ne pas faire de demande à caractère privé visant à l'obtention de documents contenant des données privées et/ou nominatives.</p>
+      
+      <p>Si vous rencontrez un problème dans l'utilisation du service ou que vous avez une question, n'hésitez pas à contactez l’équipe de MaDada en utilisant <a href="https://madada.fr/aide/contact">ce formulaire</a></p>
+  </dd>
+  <dd>
+    <dt id="autorite">Les autorités publiques<a href="#autorites">#</a> </dt>
 
-    <dd>
+      <p>Lorsque vous répondez à une demande d'accès à un document administratif, vos réponses sont publiques. Veuillez vérifier le contenu de vos email (signature, etc.) afin que des données nominatives ou personnelles dont vous ne souhaiteriez pas la diffusion publique.</p>
 
-      <p>If you see any personal information about you on the site which you'd like
-        us to remove or hide, then please <a href="<%= help_contact_path %>">let us know</a>.
-        Specify exactly what information you believe to be problematic and why, and
-        where it appears on the site.</p>
+    <p>Lorsque vous recevez une demande d'accès à un document administratif, merci de répondre à l’adresse email fournie par notre service.</p>
 
-      <p>If it is sensitive personal information that has been accidentally
-        posted, then we will usually remove it. Normally we will only consider
-        requests to remove personal information which come from the individual
-        concerned, but for sensitive information we would appreciate anyone
-        pointing out anything they see.</p>
+    <p>Si vous rencontrez un problème dans l'utilisation du service ou que vous avez une question, n'hésitez pas à contactez l’équipe de MaDada en utilisant <a href="https://madada.fr/aide/contact">ce formulaire</a></p>
+  </dd>
+  <dd>
+    <dt id="equipe">L’équipe MaDada<a href="#equipe">#</a> </dt>
 
-      <p>We consider that there is a strong public interest in
-        retaining the names of officers or servants of public authorities. We will only
-        remove such names in exceptional circumstances, such as where the disclosure of
-        a name and position of employment would substantially risk an individual's
-        safety. If you are such an official and you wish to have your name removed for
-        such an urgent reason, you must supply us with a request to do so from your
-        line manager. This request must demonstrate that a risk has been perceived
-        which outweighs the public interest, and must demonstrate that efforts have
-        been made to conceal the name on the organisation's own website.</p>
+      <p>Nous adoptons une position neutre vis-à-vis des documents demandés aux autorités publiques et ne soutenons aucune cause partisane ou politique. Le but de la plateforme MaDada est de faciliter l'exercice du droit d'accès à l'information, tel qu'établi par la loi. Nous oeuvrons pour que chaque citoyenne ou citoyen puisse exercer ce droit fondamental. Pour ce faire nous entretenons des relations avec les autorités publiques ou la Commission d'accès aux documents administratifs (CADA) afin de contribuer à la simplification des démarches associées.</p>
 
-      <p>For all other requests we apply a public interest test to decide
-        whether information should be removed.
-         <a href="http://www.statutelaw.gov.uk/content.aspx?ActiveTextDocId=3190650">Section 32</a>
-        of the Data Protection Act 1998 permits us to do this, as the material we
-        publish is journalistic. We cannot easily edit many types of attachments (such
-        as PDFs, or Microsoft Word or Excel files), so we will usually ask
-        that authorities resend these with the personal information removed.</p>
+      <p>En conséquence, l'équipe de modération de MaDada se réserve la possibilité de masquer ou de supprimer des demandes contenant des propos injurieux ou diffamants.</p>
+      <p>L'équipe d'administration et de modération de MaDada est au service des utilisatrices et des utilisateurs et des administrations afin de faciliter l'exercice du droit d'accès à l'information.</p>
 
-    </dd>
+      <p>Nous efectuons régulièrement des mises à jour de l’annuaire des autorités publiques. Si vous constatez une erreur ou que vous souhaitez l'ajout d'une nouvelle autorité publique, merci d'utilisez <a href="https://madada.fr/change_request/new">ce formulaire</a>.</p>
+      <p> MaDada est une plateforme associative. Bien que nous fassions notre possible pour faciliter votre droit d’accès à l’information, nous ne pouvons en aucun cas garantir le résultat de vos demandes, ni notre capacité à intervenir dans des délais précis.</p>  
+  </dd>
+</dl>
 
 
-  </dl>
-
-  <p><strong>Learn more</strong> from the help for <a href="<%= help_officers_path %>">FOI officers</a> --&gt;
-
-    <div id="hash_link_padding"></div>
+<div id="hash_link_padding"></div>
 </div>

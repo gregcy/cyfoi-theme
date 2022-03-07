@@ -1,4 +1,4 @@
-<% @title = "About our API" %>
+<% @title = "A propos de notre API" %>
 
 <%= render :partial => 'sidebar' %>
 
@@ -7,84 +7,79 @@
   <dl>
     <dt>Introduction</dt>
     <dd>
-      <p>This page explains how programmers can make other websites and software
-        interact with  <%= site_name %> via an "API".
+      <p>Cette page explique comment les programmeurs peuvent faire interagir d'autres sites web et logiciels avec Madada via une "API".
       </p>
 
-      <p> <%= site_name %> does not have a full API yet, but we are gradually adding
-        lots of things that are similar in use to an API as they are requested.
+      <p> <%= site_name %> n'a pas d'API complète pour l'instant, mais nous ajoutons graduellement des éléments dont l'usage se rapproche de celui d'une API. Cette page sera prochainement traduite en français.
       </p>
     </dd>
 
-    <dt>Linking to new requests</dt>
+    <dt>Lien vers les nouvelles requêtes</dt>
     <dd>
-      <p>To encourage your users to make links to a particular public authority, use URLs of the form
+      <p>Afin d'encourager les utilisateur.rice.s à faire des liens vers les demandes adressées à une autorité adiministrative en particulier, utilisez les URL sous la forme
         <%= link_to new_request_to_body_path(:url_name => "liverpool_city_council") , new_request_to_body_path(:url_name => "liverpool_city_council") %>.
-        These are the parameters you can add to those URLs, either in the URL or from a form.
+        Les paramètres ci-dessous peuvent être ajoutés à vos URL, soit dans l'URL soit dans le formulaire.
       </p>
         <ul>
-          <li> <strong>title</strong> - default summary of the new request.</li>
-          <li> <strong>default_letter</strong> - default text of the body of the letter. The salutation (Dear...) and signoff (Yours...) are wrapped round this. </li>
-          <li> <strong>body</strong> - as an alternative to default_letter, this sets the default entire text of the request, so you can customise the salutation and signoff. </li>
-          <li> <strong>tags</strong> - space separated list of tags, so you can find and link up any requests made later, e.g. <em>openlylocal spending_id:12345</em>. The : indicates it is a machine tag. The values of machine tags may also include colons, useful for URIs.
+          <li> <strong>title</strong> - résumé par défaut de la nouvelle requête.</li>
+          <li> <strong>default_letter</strong> - texte par défaut du corps de la demande. La formule de politesse d'introduction (Chère...) et de salutation (Veuillez...) sont intégrées à l'intérieur. </li>
+          <li> <strong>body</strong> - il s'agit d'une alternative à default_letter, qui fournit le texte entier de la demande, de manière à vous laisser la possibilité de modifier les formules de politesse. </li>
+          <li> <strong>tags</strong> - liste séparé par des virgules des mots-clés, vous permettant de trouver et de lier aux demandes en cours et à venir associées à ces mots-clés, par exemple <em>autorités-locales spending_id:12345</em>. les : indiquent qu'il s'agit d'un mot-clé fourni par le logiciel. Les valeurs des mots-clés fournis par le logiciel peuvent inclure des :, utiles pour les URIs.
         </ul>
     </dd>
 
-    <dt>RSS (actually, Atom) feeds</dt>
+    <dt>Flux RSS (Atom) </dt>
     <dd>
-      <p>There are Atom feeds on most pages which list FOI requests, which you can
-        use to get updates and links in XML format. Find the URL of the Atom feed in
-        one of these ways:
+      <p>Des flux Atom sont disponibles sur la plupart de pages qui listent les demandes d'accès à l'information, que vous pouvez utiliser pour être tenus au courant des mises à jour de la demande au format XML. 
+      Pour trouver le lien du flux Atom il existe 2 possibilités :
       </p>
         <ul>
-          <li>Look for the <%= image_tag "feed-16.png", :alt => "RSS icon" %> RSS feed links.</li>
-          <li>Examine the <code>&lt;link rel="alternate" type="application/atom+xml"&gt;</code> tag in the head of the HTML. </li>
-          <li>Add <code>/feed</code> to the start of another URL.
+          <li>Recherchez l'icône <%= image_tag "feed-16.png", :alt => "RSS icon" %> des flux RSS.</li>
+          <li>Examine le  code <code>&lt;link rel="alternate" type="application/atom+xml"&gt;</code>  dans le header du code HTML. </li>
+          <li>Ajoutez <code>/feed</code> au début d'une URL.
         </ul>
 
-        <p>In particular, even complicated search queries have Atom feeds.
-          You can do all sorts of things with them, such as query by authority, by file
-          type, by date range, or by status. See the <a href="<%= advanced_search_path %>">advanced search
-            tips</a> for details.
+        <p>En particuler, même les requêtes complexes disposent de liens RSS.
+          Vous pouvez faire plein de choses diffférentes avec ces liens, comme rechercher par autorité, par type de fichier, par plage de date, ou par status. 
+          Consultez la page d'aide sur la <a href="<%= advanced_search_path %>">recherche avancée</a> pour plus de détails.
         </p>
     </dd>
 
-    <dt>JSON structured data</dt>
+    <dt>Données strucutées en JSON</dt>
     <dd>
-      <p>Quite a few pages have JSON versions, which let you download information about
-        objects in a structured form. Find them by:
+      <p>Un certains nombre de page disposent d'une version JSON, qui vous permettent de télécharger des informations which let you download information sous le forme d'objets structurés. 
+      Pour les trouver :
       </p>
       <ul>
-        <li>Adding <code>.json</code> to the end of the URL. </li>
-        <li>Look for the <code>&lt;link rel="alternate" type="application/json"&gt;</code> tag in the head of the HTML. </li>
+        <li>Ajouter <code>.json</code> à la fin de l'URL. </li>
+        <li>Regarder le <code>&lt;link rel="alternate" type="application/json"&gt;</code> dans les en-têtes du code HTML. </li>
       </ul>
 
-      <p>Requests, users and authorities all have JSON versions containing basic
-        information about them. Every Atom feed has a JSON equivalent, containing
-        information about the list of events in the feed.
+      <p>Requêtes, utilisateurs et autorités disposent tous d'une version JSON contenant des informations basiques les concernant. 
+      Chaque flux Atom à son équivalent JSON, contenant des informations sur la liste des évènements du flux.
       </p>
     </dd>
 
-    <dt>Spreadsheet of all authorities</dt>
+    <dt>Liste des autorités</dt>
     <dd>
       <p>
-        A spreadsheet file listing every body in <%= site_name %> is available:
+        Un fichier contenant la liste des autorités publiques du site <%= site_name %> est disponible ici:
         <%= link_to "all-authorities.csv", all_public_bodies_csv_path %>
       </p>
 
     </dd>
 
 
-    <dt> 5. Write API </dt>
+    <dt> 5. API en écriture</dt>
     <dd>
       <p>
-        The write API is designed to be used by authorities to create their own requests in the system. The API is currently used by mySociety's <a href="https://github.com/mysociety/foi-register">FOI Register software</a> to support using Alaveteli as a disclosure log for all FOI activity at a particular public body. More technical information about the write API is available on the <a href="https://github.com/mysociety/alaveteli/wiki/API#write-api">Alaveteli wiki</a>.
+        L'API en écriture est destinée aux autorités pour leur permettre de créer leurs proposes requêtes sur la plateforme. Cette API est actuellement utilisée par le <a href="https://github.com/mysociety/foi-register">logiciel de mySociety</a> afin d'utiliser Alaveteli comme un registre de traitement de l'ensemble de l'activité de demande d'accès à l'information concernant une autorité publiques particulière. 
+        Plus d'informations techniques concernant l'API en écriture est disponible sur <a href="https://github.com/mysociety/alaveteli/wiki/API#write-api">le wiki d'Alaveteli </a>.
       </p>
     </dd>
   </dl>
 
-  <p>Please <a href="<%= help_contact_path %>">contact us</a> if you need an API feature that isn't there yet. It's
-    very much a work in progress, and we do add things when people ask us to.</p>
+  <p>Merci de <a href="<%= help_contact_path %>">nous contacter</a> si vous avez besoin d'une fonctionnalité qui n'est pas disponible actuellement.</p>
 
   <div id="hash_link_padding"></div>
 </div>
