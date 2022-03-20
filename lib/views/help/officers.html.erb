@@ -1,4 +1,4 @@
-<% @title = "FAQ pour les administrations" %>
+<% @title = "FOI officer questions" %>
 
 <%= render :partial => 'sidebar' %>
 
@@ -7,122 +7,202 @@
 
   <dl>
 
-  <dt id="top">PRADA: quelles sont mes obligations légales ?<a href="#top">#</a> </dt>
+    <dt id="top">I just got here from bottom of an FOI request, what is going on? <a href="#top">#</a> </dt>
 
-  <dd><p>Le code des relations entre le public et l'administration (CRPA) définit les modalités d'accès aux documents administratifs et de réutilisation des informations publiques.</p>
+    <dd><p><%= site_name %> is a service run by a charity. It helps ordinary members
+        of the public make FOI requests, and easily track and share the responses.</p>
 
-    <p>Dans le livre III, les articles L330-1 à L330-4 précisent l'obligation faites aux autorités administratives de 
-      nommer en leur sein une personne responsable de l'accès aux documents administratifs.
-    </p>
-    <p>L'article L330-2 précise les typologies d'autorités administratives concernées :
-    <ul>
-      <li> Les communes de dix mille habitants ou plus, les départements, les régions et la collectivité territoriale de Corse ;</li>
-      <li> Les établissements publics nationaux et locaux qui emploient au moins deux cents agents ;</li>
-      <li> Les établissements publics de coopération intercommunale regroupant une population de dix mille habitants ou plus ;</li>
-      <li> Les autres personnes de droit public et les personnes de droit privé chargées de la gestion d'un service public qui emploient au moins deux cents agents.</li>
-    </ul>
-    <p>Enfin, il est stipulé dans l'article L330-3 que les autorités administratives concernées doivent porter à connaissance du public les nom, prénoms, et coordonnées professionnelles de la personne responsable.
-    </p>
-  </dd>
-  
-  <dt id="top">Je viens de recevoir un courriel de <%= site_name %>, qu'est-ce que c'est?<a href="#top">#</a> </dt>
-
-    <dd><p><%= site_name %> permet à ses utilisateurs de faire des demandes d'accès aux documents administratifs et leur permet de suivre les réponses et de les partager facilement, tel que le prévoit la loi.</p>
-
-      <p>La demande d'accès que vous avez reçue a été faite par un utilisateur de <%= site_name %>.
-        Vous pouvez simplement répondre à la demande via l’email reçu.
-        Toutes les réponses des autorités publiques seront automatiquement publiées sur Internet.
+      <p>The FOI request you received was made by someone using <%= site_name %>. You can
+        simply reply to the request as you would any other request from an individual.
+        The only difference is that your response will be automatically published on
+        the Internet.
       </p>
-      <p>Si vous avez des questions concernant la protection de la vie privée, veuillez lire les réponses ci-dessous.
-        Vous pouvez également lire la <a href="<%= help_about_path %>">présentation de <%= site_name %></a> pour en savoir plus sur
-        l'utilité du site du point de vue des utilisateurs.
-        Vous pouvez également faire une recherche sur le site pour trouver le service public pour
-        lequel vous travaillez et visualiser les autres demandes faites à l'aide de <%= site_name %>.
+      <p>If you have privacy or other concerns, please read the answers below.
+        You might also like to read the <a
+        href="<%= help_about_path %>">introduction to <%= site_name %></a> to find out more about what
+        the site does from the point of view of a user. You can also search the
+        site to find the authority that you work for, and view the status of
+        any requests made using the site.
 
-      <p>Enfin, nous serions ravis de recevoir des commentaires de la part des PRADA, n'hésitez donc pas
-        à <a href="<%= help_contact_path %>">nous contacter</a>.
+      <p>Finally, we welcome comments and
+        thoughts from FOI officers, please <a href="<%= help_contact_path %>">get in touch</a>.
       </p>
     </dd>
 
-    <dt id="realpeople">Les personnes qui font des demandes sont-elles des personnes réelles ?<a href="#realpeople">#</a> </dt>
+    <dt id="responses">Why are you publishing responses to FOI requests? <a href="#responses">#</a> </dt>
 
-    <dd>Oui. Afin de pouvoir suivre les réponses nous utilisons des adresses électroniques générées par ordinateur pour chaque demande.
-    Cependant, avant de pouvoir envoyer une demande, chaque utilisateur doit s'inscrire sur le site avec une adresse email unique que nous avons vérifiée.
-    Vous pouvez trouver sur <%= site_name %> la liste de toutes les demandes faites par chaque utilisateur.
+    <dd>We think there are lots of benefits. Most importantly it will encourage the
+      public to be more interested and involved in the work of government. We
+      also hope that it will reduce the number of duplicate requests on any
+      subject that a public body will receive. Given that Freedom of Information
+      responses contain public information, which anybody could easily request
+      again from the public authority, we think there should be no reason not to
+      publish it widely.
     </dd>
 
-    <dt id="spam_problems">Je peux voir une demande sur <%= site_name %>, mais je n&apos;ai jamais reçu d&apos;email!<a href="#spam_problems">#</a> </dt>
+    <dt id="realpeople">Are the people making requests real people? <a href="#realpeople">#</a> </dt>
 
-    <dd><p>Si une demande apparaît sur le site, cela signifie que nous avons tenté de l'envoyer à l'autorité par email.
-    Tous les messages d'échec de livraison apparaîtront automatiquement sur le site. Vous pouvez vérifier l'adresse que
-    nous utilisons en cliquant sur le lien "Voir l'adresse email de demande d'accès à l'information " qui apparaît sur la page de l'autorité publique.
-    <a href="<%= help_contact_path %>">Contactez-nous</a> s'il y a une meilleure adresse que nous pouvons utiliser.</p>
-
-    <p>Les demandes n'arrivent parfois pas parce qu'elles sont bloquées par les “filtres anti-spam” du département informatique de l'autorité publique.
-    Les autorités peuvent s’assurer que cela ne se reproduise plus en demandant à leur service informatique de rajouter les emails
-    @<strong>@<%= AlaveteliConfiguration::incoming_email_domain %></strong> à la liste des emails autorisés.
-    A votre demande, nous pouvons vous renvoyer les demandes déjà réalisées et/ou vous donner des
-    détails techniques concernant le problème de livraison afin que votre service informatique puisse régler le problème.</p>
-
-    <p>Enfin, vous pouvez répondre à toute demande depuis votre navigateur internet, sans avoir besoin d'email,
-    en utilisant simplement le lien "répondre à la demande", en bas de chaque page de demande.</p>
+    <dd>Yes. For the purposes of keeping track of responses we use
+      computer-generated email addresses for each request. However, before
+      they can send a request, each user must register on the site with a
+      unique email address that we then verify. You can search this site and
+      find a page listing all requests that each person has made.
     </dd>
 
-    <dt id="days">Sous quels délais les administrations sont-elles tenues de répondre à la demande ?<a href="#days">#</a> </dt>
+    <dt id="email_only">An email isn't a sufficient address for an FOI request! <a href="#email_only">#</a> </dt>
 
-    <dd><p>
-    Les administrations sont tenues de répondre <strong>sous un mois à compter de la date de réception de la demande</strong> aux demandes de documents administratifs. Madada indique la durée légale maximale de réponse pour chaque demande. Toute décision de refus d'accès aux documents administratifs est notifiée au demandeur sous la forme d'une décision écrite motivée comportant l'indication des voies et délais de recours. Le demandeur dispose <strong>d'un délai de deux mois à compter du refus d'accès aux documents administratifs</strong> qui lui est opposé pour saisir la Commission d'accès aux documents administratifs.
+    <dd>Yes it is. In the UK, this
+      <a href="https://www.whatdotheyknow.com/request/1142/response/2894/attach/5/20080806100741260.pdf">letter from the ICO to Rother District Council</a> gives guidance on the matter, specifically
+      in the context of requests made via WhatDoTheyKnow, a similar site to <%= site_name %>.
+    </dd>
+
+    <dt id="vexatious">Aren't you making lots of vexatious requests? <a href="#vexatious">#</a> </dt>
+
+    <dd><p><%= site_name %> is not making any requests. We are sending requests on
+        behalf of our users, who are real people making the requests. </p>
+      <p>Look at it like this - if lots of different people made requests from
+        different Hotmail email addresses, then you would not think that Microsoft were
+        making vexatious requests. It is exactly the same if lots of requests are made
+        via <%= site_name %>. Moreover, since all requests are public it is much easier
+        for you to see if one of our users is making vexatious requests. </p>
+
+    </dd>
+
+    <dt id="spam_problems">I can see a request on <%= site_name %>, but we never got it by email!<a href="#spam_problems">#</a> </dt>
+
+    <dd><p>If a request appears on the site, then we have attempted to send it to
+        the authority by email. Any delivery failure messages will automatically
+        appear on the site. You can check the address we're using with the "View FOI
+        email address" link which appears on the page for the authority. <a
+        href="<%= help_contact_path %>">Contact us</a> if there is a better address we can
+        use.</p>
+      <p>Requests are sometimes not delivered because they are quietly removed by
+        "spam filters" in the IT department of the authority. Authorities can make
+        sure this doesn't happen by asking their IT departments to "whitelist"
+        any email from <strong>@<%= AlaveteliConfiguration::incoming_email_domain %></strong>.
+        If you <a href="<%= help_contact_path %>">ask us</a> we will resend any request,
+        and/or give technical details of delivery so an IT department can chase
+        up what happened to the message.
       </p>
-
-      <p>Si vous avez connaissance d'un motif pouvant justifier un délai de réponse important, il est recommandé d'en informer brièvement les demandeurs par email à ce sujet. Les administrateurs PRADA ont souvent beaucoup de travail à fournir pour répondre à certains requêtes, mais ce processus reste invisible et inconnu du public. Nous pensons que cela aiderait tout le monde de rendre cette complexité de traitement plus visible.</p>
-
+      <p>Finally, you can respond to any request from your web browser, without
+        needing any email, using the "respond to request" link at the bottom of
+        each request page.
+      </p>
     </dd>
 
-    <dt id="days2">Quels sont les détails de ce calcul de délai ?<a href="#days2">#</a> </dt>
+    <dt id="days">How do you calculate the deadline shown on request pages?<a href="#days">#</a> </dt>
 
     <dd>
 
-    <p>Merci de vous référer d'abord à la question précédente. Les administrations sont tenues de répondre rapidement aux demandes de documents administratifs. Si elles n'y parviennent pas, il est souhaitable qu'elles démontrent le fait qu'un travail interne de recherche et de mise en forme est en cours et qu'elles expliquent en quoi un délai supplémentaire est nécessaire.</p>
+      <p>The Freedom of Information Act says:</p>
 
-    <p>Ceci étant dit, <%= site_name %> indique la durée légale maximale de réponse pour chaque demande.</p>
-    <p>Le jour où la demande est délivrée par email est compté comme le "jour 0", même si la demande a été délivrée tard dans la soirée. Les journées finissent à minuit. Nous  comptons ensuite le jour suivant comme le "jour 1", et ainsi de suite jusqu'aux <strong><%= AlaveteliConfiguration::reply_late_after_days %> jours</strong>.</p>
+      <blockquote><p>A public authority must comply with section 1(1) <strong>promptly</strong> and
+      in any event not later than the twentieth working day following the date of
+      receipt.</p></blockquote>
+
+      <p>The nerdy detail of exactly how weekends are counted, and what happens if
+        the request arrives out of office hours, is just that - detail. What matters
+        here is that the law says authorities must respond <strong>promptly</strong>.</p>
+
+      <p>If you've got a good reason why the request is going to take a while to
+        process, requesters find it really helpful if you can send a quick email with a
+        sentence or two saying what is happening. </p>
+
+      <p>FOI officers often have to do a lot of <strong>hard work</strong> to answer
+        requests, and this is hidden from the public. We think it would help everyone
+        to have more of that complexity visible.</p>
 
     </dd>
 
-    <dt id="large_file">Comment puis-je envoyer de gros fichiers qui ne passent pas par email ?<a href="#large_file">#</a> </dt>
+    <dt id="days2">But really, how do you calculate the deadline?<a href="#days2">#</a> </dt>
 
-    <dd>Au lieu d'utiliser l'email, vous pouvez répondre à une requête directement depuis votre navigateur internet et transmettre des pièces jointes volumineuses. Pour faire cela, choisissez "Répondre à une demande" en bas de la page de la demande. <a href="<%= help_contact_path %>">Contactez-nous</a> si le fichier est trop gros même pour notre outil (au-delà de 50Mb).
+    <dd>
+
+      <p>Please read the answer to the previous question first. Legally, authorities
+        must respond <strong>promptly</strong> to FOI requests. If they fail to do that,
+        it is best if they show the hard work they are doing by explaining what is
+        taking the extra time to do.
+      </p>
+
+      <p>That said, <%= site_name %> does show the maximum legal deadline
+        for response on each request. Here's how we calculate it.</p>
+
+      <ul>
+
+        <li>If the day we deliver the request by email is a working day, we count that
+          as "day zero", even if it was delivered late in the evening. Days end at
+          midnight.  We then count the next working day as "day one", and so on up to
+          <strong><%= AlaveteliConfiguration::reply_late_after_days %> working days</strong>.</li>
+
+        <li>If the day the request email was delivered was a non-working day, we count
+          the next working day as "day one". Delivery is delivery, even if it happened on
+          the weekend. Some authorities disagree with this, our lawyer disagrees with them. </li>
+
+        <li>Requesters are encouraged to mark when they have <strong>clarified</strong>
+          their request so the clock resets, but sometimes they get this wrong. If you
+          see a problem with a particular request, let us know and we'll fix it.</li>
+      </ul>
+
+      <p>The date thus calculated is shown on requests with the text "By law,
+        Liverpool City Council should normally have responded by...".
+      </p>
+
     </dd>
 
-    <dt id="names">Pourquoi publiez vous les noms des agent.es de service public dans le texte des emails ?<a href="#names">#</a> </dt>
+    <dt id="large_file">How can I send a large file, which won't go by email?<a href="#large_file">#</a> </dt>
 
-    <dd>Nous considérons ce que les agent.es de service public font dans le cadre de leur mission comme de l'information publique. Nous ne retirerions ce contenu que sous des circonstances exceptionnelles. Voir à ce sujet <a href="<%= help_privacy_path(:anchor => 'takedown') %>">notre politique sur les informations personnelles.</a>.
+    <dd>Instead of email, you can respond to a request directly from your web
+      browser, including uploading a file. To do this, choose "respond to request" at
+      the bottom of the request's page. <a href="<%= help_contact_path %>">Contact us</a> if it
+      is too big for even that (more than, say, 50Mb).
     </dd>
 
-    <dt id="mobiles">Publiez-vous les adresses emails et les numéros de portable ?<a href="#mobiles">#</a> </dt>
+    <dt id="names">Why do you publish the names of civil servants and the text of emails? <a href="#names">#</a> </dt>
 
-    <dd><p>Pour empêcher le spam, nous retirons automatiquement la plupart des adresses emails et numéros de téléphone des réponses aux demandes. N'hésitez pas à <a href="<%= help_contact_path %>">nous contacter</a> en cas d'oubli. Pour des raisons techniques, nous ne retirons pas toujours ces informations des fichiers joints, comme certains PDFs. Si vous souhaitez connaître l'adresse email retirée, <a href="<%= help_contact_path %>">contactez-nous</a>.
+    <dd>We consider what officers or servants do in the course of their employment
+      to be public information. We will only remove content in exceptional
+      circumstances, see our <a href="<%= help_privacy_path(:anchor => 'takedown') %>">take down policy</a>.
+    </dd>
 
+    <dt id="mobiles">Do you publish email addresses or mobile phone numbers? <a href="#mobiles">#</a> </dt>
+
+    <dd><p>To prevent spam, we automatically remove most emails and some mobile numbers from
+        responses to requests.  Please <a href="<%= help_contact_path %>">contact us</a> if we've
+        missed one.
+        For technical reasons we don't always remove them from attachments, such as certain PDFs.</p>
+    <p>If you need to know what an address was that we've removed, please <a
+      href="<%= help_contact_path %>">get in touch with us</a>.
       <% if AlaveteliConfiguration::enable_annotations %>
-      Occasionnellement, une adresse email constitue une part importante de la réponse et nous la publions alors dans une annotation.
+        Occasionally, an email address forms an important part of a response
+        and we will post it up in an obscured form in an annotation.
       <% end %>
     </p>
     </dd>
 
-    <dt id="copyright"><a id="commercial"></a>Quelle est votre politique sur le droit d'auteur des documents ?<a href="#copyright">#</a> </dt>
+    <dt id="copyright"><a id="commercial"></a>What is your policy on copyright of documents?<a href="#copyright">#</a> </dt>
 
-    <dd>
-La loi sur le droit d'accès à l'information est "aveugle" et s'applique à l'identique pour quiconque fait une demande de document et reçoit une copie de celui-ci. Si vous pensez que notre mise à disposition sur internet d'un document enfreint vos droits d'auteurs, vous pouvez <a href="<%= help_contact_path %>">nous contacter</a> et demander une dépublication. Toutefois, pour préserver l'argent du contribuable et prévenir les demandes faites en doublon, nous recommandons de ne pas le faire.
+    <dd>Our Freedom of Information law is "applicant blind", so anyone in the
+      world can request the same document and get a copy of it.
+
+      If you think our making a document available on the internet infringes your
+      copyright, you may <a href="<%= help_contact_path %>">contact us</a> and ask us
+      to take it down.  However, to save tax payers' money by preventing duplicate
+      requests, and for good public relations, we'd advise you not to do that.
     </dd>
 
-    <dt id="allowed_responses">Ma réponse à une ancienne demande <%= site_name %> a été supprimée !<a href="#allowed_responses">#</a> </dt>
-    <dd>Après 6 mois d'inactivité, <%= site_name %> limite qui peut répondre à une demande afin d'empêcher les spammeurs de s'en prendre aux anciennes demandes. A ce stade, la demande ne peut être traitée que par une personne travaillant pour l'administration concernée. Après 1 an, la demande est fermée, plus personne ne peut y répondre. Si vous souhaitez ré-ouvrir une ancienne demande pour y répondre, merci de <a href="<%= help_contact_path %>">nous contacter</a>.
+    <dt id="allowed_responses">My response to an old request on <%= site_name %> has been bounced!<a href="#allowed_responses">#</a> </dt>
+      <dd>After six months of inactivity, <%= site_name %> limits who can respond to a request to stop
+      spammers targeting old requests. At that point, the request can only be responded to by someone who's
+      from the authority. After twelve months, the request is closed to responses from anyone. If you need an
+      old request to be re-opened so that you can respond to it, please <a href="<%= help_contact_path %>">
+      contact us</a>.
       </dd>
+
 
   </dl>
 
-  <p>Si vous ne l'avez pas déjà lue, voir <a href="<%= help_about_path %>">the introduction --&gt;</a><br />
-  Sinon, voir les <a href="<%= help_credits_path %>">crédits</a> ou en savoir plus sur <a href="<%= help_api_path %>">notre API --&gt;</a>
+  <p><strong>If you haven't already</strong>, read <a href="<%= help_about_path %>">the introduction</a> --&gt;
+    <br><strong>Otherwise</strong>, the <a href="<%= help_credits_path %>">credits</a> or the <a href="<%= help_api_path %>">programmers API</a> --&gt;
 
     <div id="hash_link_padding"></div>
 </div>

@@ -1,27 +1,21 @@
 <div id="right_column_flip" class="right_column_flip">
-<h2>Pages d'aide</h2>
+<h2>Help pages</h2>
 <ul class="no_bullets">
-  <li><%= link_to_unless_current "Envoyer des demandes", help_requesting_path %></li>
-  <li><%= link_to_unless_current "Modèles de demandes", help_templates_path %></li>
-  <li><%= link_to_unless_current "En cas de refus", help_cada_path %></li>
-  <li><%= link_to_unless_current "FAQ pour les administrations", help_officers_path %></li>
-  <li><%= link_to_unless_current "Développeurs API", help_api_path %></li>
-  <li><%= link_to_unless_current "Recherche avancée", advanced_search_path %></li>
+  <li><%= link_to_unless_current "Introduction", help_about_path %></li>
+  <li><%= link_to_unless_current "Making requests", help_requesting_path %></li>
+  <li><%= link_to_unless_current "Your privacy", help_privacy_path %></li>
+  <li><%= link_to_unless_current "FOI officers", help_officers_path %></li>
+  <li><%= link_to_unless_current "About the software", help_alaveteli_path %></li>
+  <li><%= link_to_unless_current "Credits", help_credits_path %></li>
+  <li><%= link_to_unless_current "Programmers API", help_api_path %></li>
+  <li><%= link_to_unless_current "Advanced search", advanced_search_path %></li>
   <% if feature_enabled?(:alaveteli_pro) %>
-    <li><%= link_to_unless_current "Fonctions avancées", help_pro_path %></li>
+    <li><%= link_to_unless_current "Pro", help_pro_path %></li>
   <% end %>
 </ul>
 
-<h2>A propos</h2>
-<ul class="no_bullets">
-  <li><%= link_to_unless_current "A propos du site", help_about_path %></li>
-  <li><%= link_to_unless_current "A propos du logiciel", help_alaveteli_path %></li>
-  <li><%= link_to_unless_current "Politique de confidentialité", help_privacy_path %></li>  
-</ul>
-
-<h2 id="contact" class="contact">Contactez-nous</h2>
-<p>
-  Si vous ne trouvez pas de réponse à votre question dans ces pages d’aide ou si vous souhaitez nous transmettre un commentaire sur ce site,
-  <a href="<%= help_contact_path %>">contactez-nous</a>.
+<h2 id="contact" class="contact">Contact us</h2>
+<p>If your question isn't answered here, or you just wanted to let us know
+  something about the site, <a href="<%= help_contact_path %>">contact&nbsp;us</a>.
 </p>
 </div>
